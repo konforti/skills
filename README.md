@@ -12,7 +12,7 @@ Skills are grouped by category below. The category is a folder in this repo only
 |---|---|
 | `cloudinary-docs` | Selects the most relevant markdown pages from the current documentation using the latest llms.txt. Use when answering Cloudinary questions or integrating Cloudinary into code. |
 | `cloudinary-transformations` | Turns natural language image and video transformation requirements into valid URL transformation strings that follow Cloudinary best practices. Use when building delivery URLs, applying transformations, optimizing media, or debugging transformation syntax errors. |
-| `cloudinary-upload` | Guide uploading assets to Cloudinary — signed and unsigned uploads, upload presets, large files, remote/fetch uploads, and signature generation. Use when uploading files or URLs to Cloudinary, configuring upload presets, generating upload signatures, or debugging upload failures. For Next.js or React projects, use cloudinary-next or cloudinary-react alongside this skill. |
+| `cloudinary-upload` | Reference for uploading assets to Cloudinary, covering signed and unsigned uploads, upload presets, transformations on upload, naming and folders, large files, remote uploads, and signature generation. Use when uploading files or URLs to Cloudinary, configuring upload presets, generating upload signatures, choosing between the SDK, REST API, or Upload widget, or debugging upload failures. For Next.js or React projects, use cloudinary-next or cloudinary-react alongside this skill. |
 
 ### Frameworks
 

@@ -59,7 +59,12 @@ HTTP status is typically 400 (bad request) or 401 (auth failure).
 | Behavior | Root cause | Fix |
 |---|---|---|
 | Asset gets random public_id instead of expected | `public_id` has whitespace, or null/empty | Strip whitespace from `public_id` before upload |
-| Extra parameters ignored in unsigned upload | Parameters not in unsigned whitelist | Move parameters to upload preset |
+| Extra parameters ignored in unsigned upload | Parameters not in the unsigned allow-list | Move parameters to the upload preset |
+| Allow-listed parameter (e.g. `folder`, `tags`) ignored in unsigned upload | Preset defines the same parameter; for unsigned uploads the preset wins (only `public_id` and `filename_override` come from the request; `context` and `metadata` merge) | Remove the parameter from the preset, or switch to a signed upload |
+| Asset lands in the root folder despite slashes in `public_id` | Dynamic folder mode: `public_id` path does not set the folder | Set `asset_folder` (in the preset) |
+| Folder path missing from delivery URL | Dynamic folder mode: `asset_folder` is not part of the `public_id` | Add `public_id_prefix` or `use_asset_folder_as_public_id_prefix: true` |
+| Eager transformation exists but delivery still generates lazily | Delivery string differs from the eager string (parameter order, extension, `f_auto`) | Use identical strings or a shared `t_<name>`; pre-generate explicit formats and deliver with `f_auto` and no extension |
+| `f_auto` in `eager` or incoming `transformation` does nothing | No requesting browser at upload time | Use explicit formats (`f_webp`, `f_jpg`) in eager; keep `f_auto` on the delivery URL |
 | `overwrite: true` has no effect | Forced `false` for unsigned uploads | Switch to signed upload if overwrite is needed |
 | Format not converted as expected | File type is in `allowed_formats` — stored as-is | Remove file type from `allowed_formats` if conversion is needed |
 | Async upload result never arrives | `notification_url` not set | Add `notification_url` to request or preset |

@@ -76,4 +76,4 @@ To debug a signature mismatch:
 3. Verify sort order: compare your sorted keys to alphabetical
 4. Verify timestamp value is ≤ 3600 seconds in the past
 
-Official documentation: [Authentication Signatures](https://cloudinary.com/documentation/authentication_signatures.md)
+Official documentation: [Authentication Signatures](https://cloudinary.com/documentation/authentication_signatures.md?install_source=skillspack&referrer=upload-skill)

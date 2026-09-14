@@ -94,4 +94,4 @@ while offset < total_size:
 | Not handling `done: false` | Treating mid-upload as error | Only treat HTTP errors as failures |
 | Wrong `total` in Content-Range | `400 Invalid Content-Range` | Use actual file byte size, not estimated |
 
-Official documentation: [Manual Chunked Upload](https://cloudinary.com/documentation/upload_images.md#manual_chunked_upload_rest)
+Official documentation: [Manual Chunked Upload](https://cloudinary.com/documentation/upload_images.md?install_source=skillspack&referrer=upload-skill#manual_chunked_upload_rest)
