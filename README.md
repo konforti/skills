@@ -10,6 +10,7 @@ The agent skills in this package help your AI coding assistant write correct Clo
 | `cloudinary-transformations` | Turns natural language image and video transformation requirements into valid URL transformation strings that follow Cloudinary best practices. Use when building delivery URLs, applying transformations, optimizing media, or debugging transformation syntax errors. |
 | `cloudinary-react` | Provides opinionated React SDK patterns for configuration, common integration scenarios, and troubleshooting for frequent errors and TypeScript pitfalls. Use when developing React apps with Cloudinary. |
 | `cloudinary-next` | Provides opinionated Next.js SDK patterns for Server and Client Component boundaries, server-side uploads and deletes, and troubleshooting for frequent errors and TypeScript pitfalls. Use when developing Next.js apps with Cloudinary. |
+| `cloudinary-video` | Builds video experiences on the Cloudinary Video Player — adaptive streaming, chapters, captions, transcripts, hotspots, and AI analysis — and migrates media onto Cloudinary from Brightcove, Vimeo, YouTube, or Wistia. Use when building or improving a video site on Cloudinary. |
 
 ## Install
 
